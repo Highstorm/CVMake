@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm 0;
+    /* Add vertical margins for proper page breaks */
+  }
+
+  @page :first {
+    margin-top: 0;
+    /* First page uses HTML padding, so remove page margin */
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: white;
+    /* Ensure background is white in print */
+  }
+}

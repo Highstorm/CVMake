@@ -1,0 +1,267 @@
+{
+  "selectedTemplate": 4,
+  "headings": {
+    "education": "Ausbildung",
+    "projects": "Kompetenzen",
+    "awards": "Zertifizierungen",
+    "work": "Berufserfahrung",
+    "skills": "Sprachen"
+  },
+  "basics": {
+    "name": "Sebastian Pieper",
+    "email": "seb@stianpieper.de",
+    "location": {
+      "address": "Selb, BY"
+    },
+    "phone": "+49 (0) 151 405 130 49"
+  },
+  "education": [
+    {
+      "endDate": "2009",
+      "institution": "Le-Go GmbH",
+      "location": "Hof",
+      "studyType": "Fachinformatiker Für Anwendungsentwicklung"
+    },
+    {
+      "institution": "Berufsoberschule Regensburg",
+      "studyType": "Fachhochschulreife",
+      "location": "Regensburg",
+      "endDate": "2010",
+      "area": "Technik"
+    },
+    {
+      "institution": "Fachhochschule München",
+      "location": "München",
+      "endDate": "2012",
+      "area": "Angewandte Informatik"
+    }
+  ],
+  "work": [
+    {
+      "location": "Düsseldorf",
+      "position": "Business Product Owner",
+      "website": "athlon.com",
+      "startDate": "Februar 2024",
+      "highlights": [
+        "Verantwortung als Business Product Owner für zentrale Mobilitätslösungen bei Athlon (Mercedes-Benz Mobility) inkl. End-to-End-Steuerung, Stakeholder-Alignment und inhaltliche Führung zweier cross-funktionaler Entwicklungsteams.",
+        "Umsetzung der elektronischen Rechnungsverarbeitung 2025: Konzeption und Aufbau neuer Eingangs- & Ausgangsrechnungsstrecken (XRechnung, ZUGFeRD) inkl. XML-/XSD-Validierung, PDF-Konvertierung und revisionssicherer Archivierung (D3).",
+        "Requirements Engineering für komplexe Fach- und Systemlandschaften; Modellierung von End-to-End-Prozessen sowie Definition von Schnittstellen-, Validierungs- und Datenverarbeitungslogiken.",
+        "Entwicklung automatisierter Test- und Validierungssysteme für 33 Microservices; Steigerung der Testabdeckung von 5 % auf 70 % und Überführung in CI/CD-Pipelines, wodurch Testaufwände auf <20 % pro Sprint sanken und Release-Rollbacks um 90 % reduziert wurden.",
+        "Entwicklung eines KI-Prototyps zur intelligenten XML-Fehlerklassifikation und Übergabe in eine konzernweite KI-Initiative zur Skalierung zukünftiger E-Rechnungsprozesse.",
+        "Leitung der Entwicklung einer Fahrerdaten-Managementlösung (Daimler Truck ↔ Athlon) mit nachhaltiger Reduktion der Serviceaufwände um >50 %.",
+        "Strategische Weiterentwicklung der Systemarchitektur von monolithischen Strukturen zu Event-Driven-Microservices, wodurch Reaktions- und Ausfallzeiten signifikant verbessert wurden."
+      ],
+      "company": "Athlon Germany GmbH"
+    },
+    {
+      "location": "Selb / Krakow",
+      "position": "Senior Product Owner & Projektmanager",
+      "website": "https://analyzing-testing.netzsch.com/de",
+      "startDate": "März 2024",
+      "endDate": "Dezember 2024",
+      "highlights": [
+        "Product Owner für ein internationales Kundenportal zur konsolidierten Auswertung technischer Gerätedaten; Definition von Vision, Zielbild und Umsetzungsstrategie.",
+        "Aufbau eines strukturierten Product Backlogs und Einführung klarer User Stories; Verkürzung der Entwicklungszeiten und Verfünffachung des Projektfortschritts innerhalb weniger Monate.",
+        "Führung und Weiterentwicklung eines internationalen Entwicklerteams; Einführung eines effizienten, story-basierten Arbeitsmodells und Steigerung der Team-Produktivität um >30 %.",
+        "Optimierung teaminterner Prozesse durch Abbau unnötiger Strukturen und Einführung schlanker Workflows; Reduktion der Abstimmungs- und Koordinationsaufwände um ~25 %.",
+        "Technischer Ansprechpartner für das Team; enge Zusammenarbeit mit externen Stakeholdern zur deutlichen Verbesserung des fachlich-technischen Alignments.",
+        "Weiterentwicklung der agilen Arbeitsweise und Aufbau eines optimierten Reportings; Erhöhung der Transparenz und Planbarkeit für die Projektleitung und frühzeitige Risikoerkennung."
+      ],
+      "company": "NETZSCH Gerätebau GmbH & Co. KG"
+    },
+    {
+      "location": "Selb",
+      "position": "Projektmanagement-Berater für Softwareentwicklung & IT-Projekte",
+      "startDate": "Oktober 2023",
+      "highlights": [
+        "Selbstständiger Berater für Softwareentwicklung, Projektmanagement und technische Produktführung; Unterstützung von Kunden bei der strategischen, fachlichen und technischen Umsetzung komplexer Softwareprojekte.",
+        "Entwicklung einer Aggregations- und Managementplattform für Social-Media-Initiativen bei NVIDIA Deutschland; zentrale Sammlung und Auswertung von Influencer-Inhalten sowie Aufbau eines KPI-Frameworks für Performance- und Budgetanalysen.",
+        "Prozessanalyse und Implementierung eines digitalen Dokumentationssystems für die Qualitätssicherung bei Vishay Deutschland; Schließung von über 90 % aller Dokumentationslücken und deutliche Steigerung der Auditfähigkeit.",
+        "Leitender Softwareentwickler im EAMZ-Projekt der Bundesagentur für Arbeit; Führung zweier Entwicklerteams und Umsetzung regulatorischer Anforderungen in das Registrierungs-Frontend für europäische Arbeitskräfte.",
+        "Fokus auf Effizienzsteigerung, Qualitätsoptimierung und strukturierte technische Architekturentscheidungen in allen Kundenprojekten."
+      ],
+      "company": "Selbstständig"
+    },
+    {
+      "location": "Hof",
+      "position": "Projektleiter & Product Owner",
+      "website": "https://fronetic.de",
+      "startDate": "Januar 2019",
+      "endDate": "Oktober 2023",
+      "highlights": [
+        "Als Projektleiter verantwortete ich eine Vielzahl von Kundenprojekten im Bereich Web Anwendungen und mobiler Applikationen. ",
+        "Meine Aufgaben umfasseten dabei die ganzheitliche Betreuung von Projekten, von der Konzeption bis zur Umsetzung",
+        "Ich unterstützte unteranderem das Entwicklerteam in der Rolle des Product Owners zur kontinuierliche Optimierung bestehender Produkte. ",
+        "Durch meine Rolle als Schnittstelle zwischen Kunden, Stakeholdern und Entwicklerteam        trug ich dazu bei, innovative Lösungen zu entwickeln und die Kundenvision erfolgreich umzusetzen. "
+      ],
+      "company": "Fronetic GmbH"
+    },
+    {
+      "location": "Hof",
+      "position": "Geschäftsführer",
+      "website": "https://fronetic.de",
+      "startDate": "März 2016",
+      "endDate": "Oktober 2023",
+      "highlights": [
+        "Im März 2016 wurde ich als Geschäftsführer der Fronetic GmbH berufen und die Bereiche interne Verwaltungsprozesse und Kundenberatung übertragen. ",
+        "Ab November 2019 übernahm ich die Zuständigkeit für Projektentwicklung und Akquise. In dieser Funktion gelang es mir, das Unternehmen erfolgreich von einem dreiköpfigen Beratungsunternehmen zu einem teamorientierten Softwarehaus mit 11 hochqualifizierten Mitarbeitern umzugestalten. ",
+        "Durch den gezielten Aufbau eines motivierten, agilen Projektteams und die Akquise deutschlandweiter Kunden konnte ich die Geschäftsbasis erfolgreich diversifizieren."
+      ],
+      "company": "Fronetic GmbH"
+    },
+    {
+      "location": "Hof",
+      "company": "Fronetic GmbH",
+      "position": "Senior Software Engineer & Consultant",
+      "website": "https://fronetic.de",
+      "startDate": "November 2015",
+      "endDate": "Dezember 2022",
+      "highlights": [
+        "Technische und fachliche Beratung in Kundenprojekten mit Fokus auf Microservice-Architekturen, Cloud-Systeme sowie moderne Web- und Backend-Technologien.",
+        "Entwicklung und Weiterentwicklung von Backend- und Frontend-Systemen, einschließlich Architekturarbeit und technischer Konzeption.",
+        "Unterstützung und teilweise Führung von Entwicklerteams in verschiedenen Projektphasen.",
+        "Betreuung namhafter Kunden wie Nvidia Deutschland, GfK, CUBE sowie Projekte für die öffentliche Verwaltung der Bundesrepublik Deutschland."
+      ]
+    },
+    {
+      "location": "Selb",
+      "company": "Moyoki GmbH / Moyoki UG",
+      "position": "Softwareentwickler",
+      "startDate": "Januar 2011",
+      "endDate": "November 2015",
+      "highlights": [
+        "Entwicklung von Mobile Apps und Web-Applikationen für regionale Kunden sowie interne Produktideen.",
+        "Mitarbeit in der technischen Konzeption, Umsetzung und Weiterentwicklung moderner Softwarelösungen auf Basis aktueller Web- und App-Technologien.",
+        null
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache (C1)",
+      "keywords": [
+        "Muttersprache (C1)"
+      ]
+    },
+    {
+      "name": "Englisch",
+      "level": "Verhandlungssicher (C2)",
+      "keywords": [
+        "Verhandlungssicher (C2)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Projektmanagement",
+      "description": "Leitung komplexer Softwareprojekte von der Konzeption bis zum Go-Live. Verantwortlich für Planung, Roadmapping, Budgetrahmen, Stakeholder-Management und Steuerung interdisziplinärer Teams. Sicher im Umgang mit agilen und hybriden Frameworks.",
+      "keywords": [
+        "Agiles Projektmanagement",
+        "Scrum / Kanban",
+        "Roadmapping",
+        "Risikomanagement",
+        "Budget- und Ressourcenplanung",
+        "Stakeholder-Management",
+        "Go-Live-Management",
+        "KPI-Tracking"
+      ]
+    },
+    {
+      "name": "Produktentwicklung",
+      "description": "End-to-end Verantwortung für digitale Produkte: von Discovery, Markt- und Nutzeranalysen, Priorisierung, Backlogpflege bis zur technischen Umsetzung. Fokus auf nachhaltigem Produktwert, Daten- und KPI-basierten Entscheidungen.",
+      "keywords": [
+        "Produktstrategie",
+        "Produktvision & Roadmap",
+        "User Research",
+        "Backlog Management",
+        "Priorisierung",
+        "Data-Driven Product Decisions",
+        "UX/UI Zusammenarbeit",
+        "AI-gestützte Produktentwicklung"
+      ]
+    },
+    {
+      "name": "Requirement Engineering",
+      "description": "Systematische Erhebung, Analyse, Modellierung und Dokumentation fachlicher und technischer Anforderungen. Übersetzung komplexer Geschäftsprozesse in klare, umsetzbare Stories und Spezifikationen.",
+      "keywords": [
+        "Anforderungsanalyse",
+        "Use Cases",
+        "User Stories / Epics",
+        "BPMN",
+        "UML",
+        "Akzeptanzkriterien",
+        "Gap-Analyse",
+        "Schnittstellenspezifikationen"
+      ]
+    },
+    {
+      "name": "Business Analyse",
+      "description": "Analyse bestehender Prozesse, Identifikation von Optimierungspotenzial und Ableitung von Handlungsempfehlungen. Sicher in End-to-End-Prozessdesign und Datenanalyse zur Entscheidungsunterstützung.",
+      "keywords": [
+        "Prozessanalyse",
+        "Prozessoptimierung",
+        "End-to-End Betrachtung",
+        "Datenanalyse",
+        "Dashboards & KPIs",
+        "Digitalisierung",
+        "Stakeholder Workshops",
+        "Cost-Benefit-Analysen"
+      ]
+    },
+    {
+      "name": "Teammanagement",
+      "description": "Führung und Entwicklung interdisziplinärer Teams in agilen Umgebungen. Fokus auf Klarheit in Rollen, Kommunikation, Empowerment und einer produktiven, wertschätzenden Teamkultur.",
+      "keywords": [
+        "Teamführung",
+        "Moderation",
+        "Coaching",
+        "Konfliktmanagement",
+        "Agile Leadership",
+        "Cross-funktionale Zusammenarbeit",
+        "Mentoring",
+        "Kommunikation"
+      ]
+    },
+    {
+      "name": "Software Architektur",
+      "description": "Fundiertes technisches Verständnis aus früherer Tätigkeit als Full-Stack Software Engineer. Erfahrung in Cloud-Architekturen, Microservices, APIs, DevOps-Prozessen und Softwarequalität.",
+      "keywords": [
+        "Microservices",
+        "REST APIs / API Design",
+        "Cloud (Azure/AWS)",
+        "CI/CD",
+        "Docker / Containerisierung",
+        "Clean Architecture",
+        "Datenmodelle",
+        "Softwarequalität"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Certified Scrum Professional - Product Owner® (CSP-PO)",
+      "date": "Dezember 2025",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Advanced Certified Scrum Product Owner® (ACSPO)",
+      "date": "November 2023",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Certified Scrum Product Owner® (CSPO)",
+      "date": "Januar 2023",
+      "awarder": "Scrum Alliance Inc."
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "projects",
+    "awards",
+    "education",
+    "skills"
+  ]
+}
