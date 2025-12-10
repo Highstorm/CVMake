@@ -255,6 +255,23 @@
       "awarder": "Scrum Alliance Inc."
     }
   ],
+  "award2": [
+    {
+      "title": "Certified Scrum Professional - Product Owner® (CSP-PO)",
+      "date": "Dezember 2025",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Advanced Certified Scrum Product Owner® (ACSPO)",
+      "date": "November 2023",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Certified Scrum Product Owner® (CSPO)",
+      "date": "Januar 2023",
+      "awarder": "Scrum Alliance Inc."
+    }
+  ],
   "sections": [
     "templates",
     "profile",
