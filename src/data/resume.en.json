@@ -42,6 +42,19 @@
   ],
   "work": [
     {
+      "location": "Selb",
+      "position": "Project Manager & Product Owner",
+      "startDate": "October 2023",
+      "highlights": [
+        "Freelance consultant specialising in software development, project management and technical product management. I support clients in the strategic, functional and technical implementation of complex software projects.",
+        "I developed an aggregation and management platform for social media initiatives at NVIDIA Germany, centralising the collection and evaluation of influencer content and establishing a KPI framework for performance and budget analyses.",
+        "I have also analysed processes and implemented a digital documentation system for quality assurance at Vishay Germany, closing over 90% of all documentation gaps and significantly increasing auditability.",
+        "As lead software developer for the Federal Employment Agency's \"EAMZ\" project, I managed two development teams and implemented regulatory requirements in the registration front end for European workers."
+      ],
+      "company": "Self-Employed",
+      "endDate": "present"
+    },
+    {
       "location": "Düsseldorf",
       "position": "Business Product Owner",
       "website": "athlon.com",
@@ -72,19 +85,6 @@
         "I developed agile working methods and established optimised reporting. Increased transparency and predictability for project management and early risk detection."
       ],
       "company": "NETZSCH Gerätebau GmbH & Co. KG"
-    },
-    {
-      "location": "Selb",
-      "position": "Project Manager & Product Owner",
-      "startDate": "October 2023",
-      "highlights": [
-        "Freelance consultant specialising in software development, project management and technical product management. I support clients in the strategic, functional and technical implementation of complex software projects.",
-        "I developed an aggregation and management platform for social media initiatives at NVIDIA Germany, centralising the collection and evaluation of influencer content and establishing a KPI framework for performance and budget analyses.",
-        "I have also analysed processes and implemented a digital documentation system for quality assurance at Vishay Germany, closing over 90% of all documentation gaps and significantly increasing auditability.",
-        "As lead software developer for the Federal Employment Agency's \"EAMZ\" project, I managed two development teams and implemented regulatory requirements in the registration front end for European workers."
-      ],
-      "company": "Self-Employed",
-      "endDate": "present"
     },
     {
       "location": "Hof",

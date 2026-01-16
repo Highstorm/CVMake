@@ -57,6 +57,17 @@ export const WorkEditor: React.FC<WorkEditorProps> = ({ work, onChange }) => {
         onChange(work.filter((_, i) => i !== index));
     }
 
+    const moveJob = (index: number, direction: 'up' | 'down') => {
+        if ((direction === 'up' && index === 0) || (direction === 'down' && index === work.length - 1)) {
+            return;
+        }
+
+        const updatedWork = [...work];
+        const newIndex = direction === 'up' ? index - 1 : index + 1;
+        [updatedWork[index], updatedWork[newIndex]] = [updatedWork[newIndex], updatedWork[index]];
+        onChange(updatedWork);
+    };
+
     return (
         <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center">
@@ -83,6 +94,20 @@ export const WorkEditor: React.FC<WorkEditorProps> = ({ work, onChange }) => {
                             </div>
                         </div>
                         <div className="flex items-center gap-2">
+                            <button
+                                onClick={(e) => { e.stopPropagation(); moveJob(index, 'up'); }}
+                                disabled={index === 0}
+                                className="p-2 text-[#92adc9] hover:text-white disabled:opacity-30 disabled:hover:text-[#92adc9] transition-colors"
+                            >
+                                <span className="material-symbols-outlined text-[20px]">keyboard_arrow_up</span>
+                            </button>
+                            <button
+                                onClick={(e) => { e.stopPropagation(); moveJob(index, 'down'); }}
+                                disabled={index === work.length - 1}
+                                className="p-2 text-[#92adc9] hover:text-white disabled:opacity-30 disabled:hover:text-[#92adc9] transition-colors"
+                            >
+                                <span className="material-symbols-outlined text-[20px]">keyboard_arrow_down</span>
+                            </button>
                             <button
                                 onClick={(e) => { e.stopPropagation(); removeJob(index); }}
                                 className="p-2 text-[#92adc9] hover:text-red-400 rounded hover:bg-white/10 transition-colors"
