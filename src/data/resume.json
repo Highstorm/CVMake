@@ -5,15 +5,17 @@
     "projects": "Kompetenzen",
     "awards": "Zertifizierungen",
     "work": "Berufserfahrung",
-    "skills": "Sprachen"
+    "skills": "Sprachen",
+    "profile": "Profil"
   },
   "basics": {
     "name": "Sebastian Pieper",
     "email": "seb@stianpieper.de",
     "location": {
-      "address": "Selb, BY"
+      "address": "Hinterer Berg 15, 95100 Selb, Bayern"
     },
-    "phone": "+49 (0) 151 405 130 49"
+    "phone": "+49 (0) 151 405 130 49",
+    "summary": "Erfahrener Projektmanager und Product Owner mit tiefem Verständnis für Softwarearchitektur, Geschäftsprozesse und Organisationsentwicklung. \nNachweisliche Erfolge in der Steuerung komplexer Digitalprojekte, der Führung internationaler Teams sowie der Einführung skalierbarer Produkt- und Systemlandschaften. "
   },
   "education": [
     {
@@ -47,7 +49,7 @@
         "Umsetzung der elektronischen Rechnungsverarbeitung 2025: Konzeption und Aufbau neuer Eingangs- & Ausgangsrechnungsstrecken (XRechnung, ZUGFeRD) inkl. XML-/XSD-Validierung, PDF-Konvertierung und revisionssicherer Archivierung (D3).",
         "Requirements Engineering für komplexe Fach- und Systemlandschaften; Modellierung von End-to-End-Prozessen sowie Definition von Schnittstellen-, Validierungs- und Datenverarbeitungslogiken.",
         "Entwicklung automatisierter Test- und Validierungssysteme für 33 Microservices; Steigerung der Testabdeckung von 5 % auf 70 % und Überführung in CI/CD-Pipelines, wodurch Testaufwände auf <20 % pro Sprint sanken und Release-Rollbacks um 90 % reduziert wurden.",
-        "Entwicklung eines KI-Prototyps zur intelligenten XML-Fehlerklassifikation und Übergabe in eine konzernweite KI-Initiative zur Skalierung zukünftiger E-Rechnungsprozesse.",
+        "Entwicklung eines KI gestützten Prototypen zur intelligenten XML-Fehlerklassifikation und Übergabe in eine konzernweite KI-Initiative zur Skalierung zukünftiger E-Rechnungsprozesse.",
         "Leitung der Entwicklung einer Fahrerdaten-Managementlösung (Daimler Truck ↔ Athlon) mit nachhaltiger Reduktion der Serviceaufwände um >50 %.",
         "Strategische Weiterentwicklung der Systemarchitektur von monolithischen Strukturen zu Event-Driven-Microservices, wodurch Reaktions- und Ausfallzeiten signifikant verbessert wurden."
       ],
@@ -239,6 +241,23 @@
     }
   ],
   "awards": [
+    {
+      "title": "Certified Scrum Professional - Product Owner® (CSP-PO)",
+      "date": "Dezember 2025",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Advanced Certified Scrum Product Owner® (ACSPO)",
+      "date": "November 2023",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Certified Scrum Product Owner® (CSPO)",
+      "date": "Januar 2023",
+      "awarder": "Scrum Alliance Inc."
+    }
+  ],
+  "award2": [
     {
       "title": "Certified Scrum Professional - Product Owner® (CSP-PO)",
       "date": "Dezember 2025",

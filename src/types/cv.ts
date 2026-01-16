@@ -4,6 +4,7 @@ export interface CVHeadings {
     awards: string;
     work: string;
     skills: string;
+    profile: string;
 }
 
 export interface CVLocation {
@@ -13,8 +14,11 @@ export interface CVLocation {
 export interface CVBasics {
     name: string;
     email: string;
+    label?: string;
+    url?: string;
     location: CVLocation;
     phone: string;
+    summary?: string;
 }
 
 export interface CVEducation {
