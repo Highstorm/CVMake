@@ -18,7 +18,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
     const { headings } = data;
 
     return (
-        <div className="max-w-[210mm] mx-auto bg-white p-[15mm_20mm] shadow-lg print:shadow-none text-base leading-normal">
+        <div className="max-w-[210mm] mx-auto bg-white p-[15mm_20mm] shadow-lg print:shadow-none print:max-w-none print:w-full print:m-0 print:p-0 text-base leading-normal">
             <Header basics={data.basics} />
 
             {/* 

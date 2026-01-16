@@ -41,20 +41,21 @@
 
 @media print {
   @page {
-    size: A4;
-    margin: 20mm 0;
-    /* Add vertical margins for proper page breaks */
-  }
-
-  @page :first {
-    margin-top: 0;
-    /* First page uses HTML padding, so remove page margin */
+    margin: 15mm 20mm;
+    size: auto;
   }
 
   body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    background-color: #101922;
-    /* Ensure background is white in print */
+    background-color: white !important;
+    overflow: visible !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  * {
+    box-shadow: none !important;
   }
 }

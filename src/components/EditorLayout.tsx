@@ -36,7 +36,7 @@ export const EditorLayout: React.FC<EditorLayoutProps> = ({ form, preview, onSav
     }, [lastSaved]);
 
     return (
-        <div className="font-display bg-background-dark text-white h-screen overflow-hidden flex flex-col">
+        <div className="font-display bg-background-dark text-white h-screen overflow-hidden print:h-auto print:overflow-visible flex flex-col">
             {/* Top Navigation Bar */}
             <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#233648] bg-surface-dark px-6 py-3 shrink-0 z-20 print:hidden">
                 <div className="flex items-center gap-4 text-white">
@@ -75,7 +75,7 @@ export const EditorLayout: React.FC<EditorLayoutProps> = ({ form, preview, onSav
             </header>
 
             {/* Main Workspace */}
-            <div className="flex flex-1 overflow-hidden relative">
+            <div className="flex flex-1 overflow-hidden relative print:overflow-visible print:h-auto print:block">
                 {/* Left Column: Editor */}
                 <aside className="w-full lg:w-[45%] xl:w-[40%] flex flex-col bg-surface-dark border-r border-[#233648] z-10 print:hidden">
                     {/* Document Title Header */}
@@ -113,7 +113,7 @@ export const EditorLayout: React.FC<EditorLayoutProps> = ({ form, preview, onSav
                 </aside>
 
                 {/* Right Column: Live Preview */}
-                <main className="hidden lg:flex flex-1 bg-[#0d141c] relative justify-center overflow-hidden print:block print:bg-white print:overflow-visible print:h-auto">
+                <main className="hidden lg:flex flex-1 bg-[#0d141c] relative justify-center overflow-hidden print:block print:bg-white print:overflow-visible print:h-auto print:w-full print:m-0">
                     {/* Background Grid Pattern */}
                     <div className="absolute inset-0 z-0 opacity-10 print:hidden" style={{ backgroundImage: "radial-gradient(#324d67 1px, transparent 1px)", backgroundSize: "20px 20px" }}>
                     </div>
@@ -134,7 +134,7 @@ export const EditorLayout: React.FC<EditorLayoutProps> = ({ form, preview, onSav
                     </div>
 
                     {/* Preview Scroll Container */}
-                    <div className="w-full h-full overflow-y-auto p-12 flex justify-center scroll-smooth z-10 print:p-0 print:overflow-visible print:block">
+                    <div className="w-full h-full overflow-y-auto p-12 flex justify-center scroll-smooth z-10 print:p-0 print:overflow-visible print:block print:w-full print:m-0">
                         {/* The Paper (A4 Size approximation for screen) */}
                         <div className="relative bg-white w-[210mm] min-h-[297mm] paper-shadow mx-auto shrink-0 origin-top transform scale-90 xl:scale-100 transition-transform print:shadow-none print:transform-none print:m-0 print:w-full print:min-h-0">
                             {preview}
