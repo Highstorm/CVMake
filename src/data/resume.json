@@ -5,7 +5,8 @@
     "projects": "Kompetenzen",
     "awards": "Zertifizierungen",
     "work": "Berufserfahrung",
-    "skills": "Sprachen"
+    "skills": "Sprachen",
+    "profile": "Profil"
   },
   "basics": {
     "name": "Sebastian Pieper",
@@ -13,7 +14,8 @@
     "location": {
       "address": "Selb, BY"
     },
-    "phone": "+49 (0) 151 405 130 49"
+    "phone": "+49 (0) 151 405 130 49",
+    "summary": "Erfahrener Projektmanager und Product Owner mit tiefem Verständnis für Softwarearchitektur, Geschäftsprozesse und Organisationsentwicklung. \nNachweisliche Erfolge in der Steuerung komplexer Digitalprojekte, der Führung internationaler Teams sowie der Einführung skalierbarer Produkt- und Systemlandschaften. "
   },
   "education": [
     {

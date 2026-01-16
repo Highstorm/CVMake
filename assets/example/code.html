@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CV Forge - CV Editor</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#101922",
+                        "background-dark": "#101922",
+                        "surface-dark": "#111a22",
+                        "input-bg": "#192633",
+                        "input-border": "#324d67",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #111a22;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #324d67;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b6a88;
+        }
+
+        .paper-shadow {
+            box-shadow: 0 0 50px -12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white h-screen overflow-hidden flex flex-col">
+    <!-- Top Navigation Bar -->
+    <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#233648] bg-surface-dark px-6 py-3 shrink-0 z-20">
+        <div class="flex items-center gap-4 text-white">
+            <div class="size-8 bg-primary/20 flex items-center justify-center rounded-lg text-primary">
+                <span class="material-symbols-outlined">description</span>
+            </div>
+            <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">CV Forge</h2>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+            <div class="flex gap-3">
+                <button
+                    class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-surface-dark border border-[#324d67] hover:bg-[#1c2b3a] text-white text-sm font-bold transition-colors">
+                    <span class="material-symbols-outlined text-[18px] mr-2">dashboard</span>
+                    <span class="truncate">Templates</span>
+                </button>
+                <button
+                    class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary hover:bg-blue-600 text-white text-sm font-bold transition-colors shadow-lg shadow-blue-900/20">
+                    <span class="material-symbols-outlined text-[18px] mr-2">download</span>
+                    <span class="truncate">Export PDF</span>
+                </button>
+            </div>
+            <div class="h-8 w-[1px] bg-[#324d67]"></div>
+            <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-[#324d67]"
+                data-alt="User profile avatar showing a smiling person"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlhWlPMKy_ncoRHj4bTqg5RNGojhKEKSdXX5h0S1nttT_x6ocDNl6JPQfqXiXFC-_jV0wRXV7OCNFqFwsRqe3Gf5WqqrNOe9LpyI-VW-MPomtLDIfx5IU-kvvrV-xU93vtW83przvcQ6gvPIOCKnC_j7xmnSPcFvwNn2Waq-GMq66fACPM5Vaj0wTzFYr3jCezijqXV_v5w-xxklx7WQISMSEL0_XD3eWC2WehAZYTFSGJvLlD_wDciZCRJiIR4hp4fSTWKvjt4ds");'>
+            </div>
+        </div>
+    </header>
+    <!-- Main Workspace -->
+    <div class="flex flex-1 overflow-hidden relative">
+        <!-- Left Column: Editor -->
+        <aside class="w-full lg:w-[45%] xl:w-[40%] flex flex-col bg-surface-dark border-r border-[#233648] z-10">
+            <!-- Document Title Header -->
+            <div class="px-6 py-4 border-b border-[#233648] bg-surface-dark sticky top-0 z-10 shadow-sm">
+                <div class="flex flex-wrap justify-between items-center gap-3">
+                    <div class="flex min-w-48 flex-col gap-1">
+                        <div class="flex items-center gap-2 group cursor-pointer">
+                            <p
+                                class="text-white tracking-tight text-xl font-bold leading-tight group-hover:underline decoration-dashed underline-offset-4">
+                                Senior Designer Resume</p>
+                            <span
+                                class="material-symbols-outlined text-[#92adc9] text-sm opacity-0 group-hover:opacity-100 transition-opacity">edit</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-[#92adc9] text-xs font-medium">
+                            <span class="w-2 h-2 rounded-full bg-green-500 block"></span>
+                            Saved 2 minutes ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scrollable Form Content -->
+            <div class="flex-1 overflow-y-auto p-6 pb-20 scroll-smooth">
+                <div class="max-w-2xl mx-auto flex flex-col gap-8">
+                    <!-- Progress Bar -->
+                    <div
+                        class="flex items-center justify-between gap-4 bg-input-bg p-4 rounded-xl border border-input-border">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-white text-sm font-bold">Profile Strength</span>
+                            <span class="text-[#92adc9] text-xs">Your resume is looking great!</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-32 h-2 bg-[#0d141c] rounded-full overflow-hidden">
+                                <div class="w-[85%] h-full bg-green-500 rounded-full"></div>
+                            </div>
+                            <span class="text-green-500 text-sm font-bold">85%</span>
+                        </div>
+                    </div>
+                    <!-- Personal Details Section -->
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-white text-lg font-bold flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">person</span>
+                            Personal Details
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex flex-col flex-1">
+                                <p class="text-[#92adc9] text-sm font-medium leading-normal pb-2">First Name</p>
+                                <input
+                                    class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-input-bg focus:border-primary h-11 placeholder:text-[#586e84] px-4 text-sm font-normal leading-normal transition-all"
+                                    placeholder="e.g. John" value="Alex" />
+                            </label>
+                            <label class="flex flex-col flex-1">
+                                <p class="text-[#92adc9] text-sm font-medium leading-normal pb-2">Last Name</p>
+                                <input
+                                    class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-input-bg focus:border-primary h-11 placeholder:text-[#586e84] px-4 text-sm font-normal leading-normal transition-all"
+                                    placeholder="e.g. Doe" value="Morgan" />
+                            </label>
+                            <label class="flex flex-col flex-1">
+                                <p class="text-[#92adc9] text-sm font-medium leading-normal pb-2">Job Title</p>
+                                <input
+                                    class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-input-bg focus:border-primary h-11 placeholder:text-[#586e84] px-4 text-sm font-normal leading-normal transition-all"
+                                    placeholder="e.g. Software Engineer" value="Senior Product Designer" />
+                            </label>
+                            <label class="flex flex-col flex-1">
+                                <p class="text-[#92adc9] text-sm font-medium leading-normal pb-2">Email Address</p>
+                                <input
+                                    class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-input-bg focus:border-primary h-11 placeholder:text-[#586e84] px-4 text-sm font-normal leading-normal transition-all"
+                                    placeholder="e.g. john@example.com" value="alex.morgan@example.com" />
+                            </label>
+                            <label class="flex flex-col flex-1">
+                                <p class="text-[#92adc9] text-sm font-medium leading-normal pb-2">Phone</p>
+                                <input
+                                    class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-input-bg focus:border-primary h-11 placeholder:text-[#586e84] px-4 text-sm font-normal leading-normal transition-all"
+                                    placeholder="" value="+1 (555) 123-4567" />
+                            </label>
+                            <label class="flex flex-col flex-1">
+                                <p class="text-[#92adc9] text-sm font-medium leading-normal pb-2">Location</p>
+                                <input
+                                    class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-input-bg focus:border-primary h-11 placeholder:text-[#586e84] px-4 text-sm font-normal leading-normal transition-all"
+                                    placeholder="City, Country" value="San Francisco, CA" />
+                            </label>
+                        </div>
+                    </div>
+                    <hr class="border-[#233648]" />
+                    <!-- Summary Section -->
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-white text-lg font-bold flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">article</span>
+                            Professional Summary
+                        </h3>
+                        <label class="flex flex-col flex-1">
+                            <p class="text-[#92adc9] text-sm font-medium leading-normal pb-2">Summary</p>
+                            <textarea
+                                class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-input-border bg-input-bg focus:border-primary min-h-[120px] placeholder:text-[#586e84] p-4 text-sm font-normal leading-normal transition-all">Results-driven Senior Product Designer with over 6 years of experience in building user-centric digital products. Expert in UI/UX design, design systems, and prototyping. Passionate about creating intuitive and accessible web experiences.</textarea>
+                            <p class="text-[#586e84] text-xs pt-2 text-right">240/500 characters</p>
+                        </label>
+                    </div>
+                    <hr class="border-[#233648]" />
+                    <!-- Experience Section -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-white text-lg font-bold flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">work</span>
+                                Experience
+                            </h3>
+                            <button
+                                class="text-primary hover:text-blue-400 text-sm font-bold flex items-center gap-1 transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">add</span> Add
+                            </button>
+                        </div>
+                        <!-- Draggable Item 1 (Expanded) -->
+                        <div class="flex flex-col rounded-xl border border-input-border bg-[#151f29] overflow-hidden">
+                            <div
+                                class="flex items-center justify-between p-4 bg-[#1c2b3a] cursor-pointer hover:bg-[#233648] transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-[#586e84] cursor-grab active:cursor-grabbing">drag_indicator</span>
+                                    <div class="flex flex-col">
+                                        <span class="text-white font-bold text-sm">TechFlow Inc.</span>
+                                        <span class="text-[#92adc9] text-xs">Senior Product Designer</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button
+                                        class="p-2 text-[#92adc9] hover:text-white rounded hover:bg-white/10 transition-colors">
+                                        <span class="material-symbols-outlined text-[20px]">delete</span>
+                                    </button>
+                                    <span class="material-symbols-outlined text-[#92adc9]">expand_less</span>
+                                </div>
+                            </div>
+                            <!-- Expanded Content -->
+                            <div class="p-4 flex flex-col gap-4 border-t border-input-border">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <label class="flex flex-col flex-1">
+                                        <p class="text-[#92adc9] text-xs font-medium pb-1">Employer</p>
+                                        <input
+                                            class="w-full rounded bg-input-bg border border-input-border text-white text-sm h-9 px-3 focus:ring-1 focus:ring-primary focus:border-primary"
+                                            value="TechFlow Inc." />
+                                    </label>
+                                    <label class="flex flex-col flex-1">
+                                        <p class="text-[#92adc9] text-xs font-medium pb-1">Job Title</p>
+                                        <input
+                                            class="w-full rounded bg-input-bg border border-input-border text-white text-sm h-9 px-3 focus:ring-1 focus:ring-primary focus:border-primary"
+                                            value="Senior Product Designer" />
+                                    </label>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <label class="flex flex-col flex-1">
+                                        <p class="text-[#92adc9] text-xs font-medium pb-1">Start Date</p>
+                                        <input
+                                            class="w-full rounded bg-input-bg border border-input-border text-white text-sm h-9 px-3 focus:ring-1 focus:ring-primary focus:border-primary"
+                                            type="month" value="2020-03" />
+                                    </label>
+                                    <label class="flex flex-col flex-1">
+                                        <p class="text-[#92adc9] text-xs font-medium pb-1">End Date</p>
+                                        <input
+                                            class="w-full rounded bg-input-bg border border-input-border text-white text-sm h-9 px-3 focus:ring-1 focus:ring-primary focus:border-primary"
+                                            type="month" value="2024-01" />
+                                    </label>
+                                </div>
+                                <label class="flex flex-col flex-1">
+                                    <p class="text-[#92adc9] text-xs font-medium pb-1">Description</p>
+                                    <textarea
+                                        class="w-full rounded bg-input-bg border border-input-border text-white text-sm p-3 min-h-[100px] focus:ring-1 focus:ring-primary focus:border-primary">• Led the redesign of the core product dashboard, resulting in a 20% increase in user engagement.
+• Mentored junior designers and established a company-wide design system.</textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Draggable Item 2 (Collapsed) -->
+                        <div class="flex flex-col rounded-xl border border-input-border bg-[#151f29] overflow-hidden">
+                            <div
+                                class="flex items-center justify-between p-4 cursor-pointer hover:bg-[#1c2b3a] transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-[#586e84] cursor-grab active:cursor-grabbing">drag_indicator</span>
+                                    <div class="flex flex-col">
+                                        <span class="text-white font-bold text-sm">Creative Studio</span>
+                                        <span class="text-[#92adc9] text-xs">UI Designer</span>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-[#92adc9]">expand_more</span>
+                            </div>
+                        </div>
+                        <!-- Add New Button -->
+                        <button
+                            class="w-full py-3 border-2 border-dashed border-[#324d67] rounded-xl text-[#92adc9] font-bold text-sm hover:bg-[#1c2b3a] hover:text-white hover:border-primary transition-all flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">add_circle</span>
+                            Add Experience
+                        </button>
+                    </div>
+                    <hr class="border-[#233648]" />
+                    <!-- Custom Section Adder -->
+                    <div class="pt-2">
+                        <button
+                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-surface-dark border border-[#324d67] hover:bg-[#1c2b3a] text-primary text-sm font-bold leading-normal w-full transition-colors">
+                            <span class="material-symbols-outlined mr-2">playlist_add</span>
+                            Add Custom Section
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Right Column: Live Preview -->
+        <main class="hidden lg:flex flex-1 bg-[#0d141c] relative justify-center overflow-hidden">
+            <!-- Background Grid Pattern -->
+            <div class="absolute inset-0 z-0 opacity-10"
+                style="background-image: radial-gradient(#324d67 1px, transparent 1px); background-size: 20px 20px;">
+            </div>
+            <!-- Toolbar Floating -->
+            <div
+                class="absolute bottom-8 right-8 z-30 flex items-center gap-2 bg-[#1c2b3a]/90 backdrop-blur border border-[#324d67] p-1.5 rounded-full shadow-xl">
+                <button
+                    class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-white transition-colors"
+                    title="Zoom Out">
+                    <span class="material-symbols-outlined text-[20px]">remove</span>
+                </button>
+                <span class="text-xs font-mono text-[#92adc9] w-12 text-center">100%</span>
+                <button
+                    class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-white transition-colors"
+                    title="Zoom In">
+                    <span class="material-symbols-outlined text-[20px]">add</span>
+                </button>
+                <div class="w-[1px] h-4 bg-[#324d67] mx-1"></div>
+                <button
+                    class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-white transition-colors"
+                    title="Fit to Screen">
+                    <span class="material-symbols-outlined text-[20px]">fit_screen</span>
+                </button>
+            </div>
+            <!-- Preview Scroll Container -->
+            <div class="w-full h-full overflow-y-auto p-12 flex justify-center scroll-smooth z-10">
+                <!-- The Paper (A4 Size approximation for screen: Aspect Ratio 1:1.414) -->
+                <!-- Width: 210mm approx 794px. We scale it slightly for view -->
+                <div
+                    class="relative bg-white w-[210mm] min-h-[297mm] paper-shadow mx-auto shrink-0 origin-top transform scale-90 xl:scale-100 transition-transform">
+                    <!-- CV Content (Rendered) -->
+                    <div class="flex flex-col h-full text-slate-800 font-sans">
+                        <!-- CV Header -->
+                        <div class="bg-slate-900 text-white px-10 py-12 flex justify-between items-start">
+                            <div class="flex flex-col gap-2">
+                                <h1 class="text-4xl font-bold uppercase tracking-wider">Alex Morgan</h1>
+                                <p class="text-blue-400 text-lg font-medium tracking-wide uppercase">Senior Product
+                                    Designer</p>
+                            </div>
+                            <div class="flex flex-col items-end gap-1 text-sm text-slate-300">
+                                <div class="flex items-center gap-2">
+                                    <span>san francisco, ca</span>
+                                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span>+1 (555) 123-4567</span>
+                                    <span class="material-symbols-outlined text-[16px]">call</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span>alex.morgan@example.com</span>
+                                    <span class="material-symbols-outlined text-[16px]">mail</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Two Column Layout -->
+                        <div class="flex flex-1">
+                            <!-- Left Sidebar of CV -->
+                            <div class="w-1/3 bg-slate-50 p-8 border-r border-slate-200">
+                                <!-- Skills -->
+                                <div class="mb-8">
+                                    <h4
+                                        class="font-bold text-slate-900 uppercase tracking-widest text-sm mb-4 border-b-2 border-slate-900 pb-2">
+                                        Skills</h4>
+                                    <ul class="flex flex-col gap-2 text-sm text-slate-600">
+                                        <li>UI/UX Design</li>
+                                        <li>Figma &amp; Sketch</li>
+                                        <li>Design Systems</li>
+                                        <li>Prototyping</li>
+                                        <li>HTML/CSS Basics</li>
+                                        <li>User Research</li>
+                                    </ul>
+                                </div>
+                                <!-- Education -->
+                                <div class="mb-8">
+                                    <h4
+                                        class="font-bold text-slate-900 uppercase tracking-widest text-sm mb-4 border-b-2 border-slate-900 pb-2">
+                                        Education</h4>
+                                    <div class="mb-4">
+                                        <p class="font-bold text-sm text-slate-800">BFA Interaction Design</p>
+                                        <p class="text-xs text-slate-500 italic mb-1">California College of the Arts</p>
+                                        <p class="text-xs text-slate-400">2012 - 2016</p>
+                                    </div>
+                                </div>
+                                <!-- Social -->
+                                <div>
+                                    <h4
+                                        class="font-bold text-slate-900 uppercase tracking-widest text-sm mb-4 border-b-2 border-slate-900 pb-2">
+                                        Links</h4>
+                                    <ul class="flex flex-col gap-2 text-sm text-blue-600 underline text-xs">
+                                        <li>linkedin.com/in/alexm</li>
+                                        <li>dribbble.com/alexm</li>
+                                        <li>alexmorgan.design</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Main Content of CV -->
+                            <div class="w-2/3 p-10">
+                                <!-- Summary -->
+                                <div class="mb-8">
+                                    <h4
+                                        class="font-bold text-slate-900 uppercase tracking-widest text-sm mb-4 flex items-center gap-2">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span> Profile
+                                    </h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed">
+                                        Results-driven Senior Product Designer with over 6 years of experience in
+                                        building user-centric digital products. Expert in UI/UX design, design systems,
+                                        and prototyping. Passionate about creating intuitive and accessible web
+                                        experiences that solve real user problems while achieving business goals.
+                                    </p>
+                                </div>
+                                <!-- Experience -->
+                                <div>
+                                    <h4
+                                        class="font-bold text-slate-900 uppercase tracking-widest text-sm mb-6 flex items-center gap-2">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span> Experience
+                                    </h4>
+                                    <!-- Job 1 -->
+                                    <div class="mb-6 relative pl-4 border-l-2 border-slate-100">
+                                        <div class="absolute -left-[5px] top-1 w-2 h-2 rounded-full bg-slate-300"></div>
+                                        <div class="flex justify-between items-baseline mb-1">
+                                            <h5 class="font-bold text-slate-800">Senior Product Designer</h5>
+                                            <span class="text-xs font-medium text-slate-400">Mar 2020 - Present</span>
+                                        </div>
+                                        <p class="text-xs font-semibold text-blue-600 mb-2 uppercase tracking-wide">
+                                            TechFlow Inc.</p>
+                                        <ul class="list-disc list-outside ml-4 text-sm text-slate-600 space-y-1">
+                                            <li>Led the redesign of the core product dashboard, resulting in a 20%
+                                                increase in daily active user engagement.</li>
+                                            <li>Mentored junior designers and established a company-wide design system
+                                                used by 4 product teams.</li>
+                                            <li>Collaborated closely with engineering to ensure pixel-perfect
+                                                implementation.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Job 2 -->
+                                    <div class="mb-6 relative pl-4 border-l-2 border-slate-100">
+                                        <div class="absolute -left-[5px] top-1 w-2 h-2 rounded-full bg-slate-300"></div>
+                                        <div class="flex justify-between items-baseline mb-1">
+                                            <h5 class="font-bold text-slate-800">UI Designer</h5>
+                                            <span class="text-xs font-medium text-slate-400">Jun 2016 - Feb 2020</span>
+                                        </div>
+                                        <p class="text-xs font-semibold text-blue-600 mb-2 uppercase tracking-wide">
+                                            Creative Studio</p>
+                                        <ul class="list-disc list-outside ml-4 text-sm text-slate-600 space-y-1">
+                                            <li>Designed marketing websites and landing pages for over 30 clients.</li>
+                                            <li>Created visual assets and illustrations for digital campaigns.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 import React from 'react';
 import type { CVEducation } from '../../types/cv';
+import { Input } from '../ui/Input';
+import { AddButton } from '../ui/AddButton';
 
 interface EducationEditorProps {
     education: CVEducation[];
@@ -31,76 +33,75 @@ export const EducationEditor: React.FC<EducationEditorProps> = ({ education, onC
     }
 
     return (
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center">
-                <h3 className="text-lg font-bold text-gray-700">Ausbildung</h3>
+                <h3 className="text-white text-lg font-bold flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary">school</span>
+                    Education
+                </h3>
                 <button
                     onClick={addEducation}
-                    className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm"
+                    className="text-primary hover:text-blue-400 text-sm font-bold flex items-center gap-1 transition-colors"
                 >
-                    + Ausbildung
+                    <span className="material-symbols-outlined text-[18px]">add</span> Add
                 </button>
             </div>
 
             {education.map((edu, index) => (
-                <div key={index} className="border p-4 rounded-lg bg-white shadow-sm space-y-3 relative group">
-                    <button
-                        onClick={() => removeEducation(index)}
-                        className="absolute top-2 right-2 text-red-400 hover:text-red-600 font-bold"
-                        title="Eintrag löschen"
-                    >
-                        ✕
-                    </button>
+                <div key={index} className="flex flex-col rounded-xl border border-input-border bg-[#151f29] overflow-hidden">
+                    <div className="flex items-center justify-between p-4 bg-[#1c2b3a] cursor-pointer hover:bg-[#233648] transition-colors group">
+                        <div className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-[#586e84]">drag_indicator</span>
+                            <div className="flex flex-col">
+                                <span className="text-white font-bold text-sm">{edu.institution || 'New Institution'}</span>
+                                <span className="text-[#92adc9] text-xs">{edu.studyType || 'Degree'}</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <button
+                                onClick={(e) => { e.stopPropagation(); removeEducation(index); }}
+                                className="p-2 text-[#92adc9] hover:text-red-400 rounded hover:bg-white/10 transition-colors"
+                            >
+                                <span className="material-symbols-outlined text-[20px]">delete</span>
+                            </button>
+                            <span className="material-symbols-outlined text-[#92adc9] group-hover:text-white transition-colors">expand_more</span>
+                        </div>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div>
-                            <label className="block text-xs font-medium text-gray-500">Institution</label>
-                            <input
-                                type="text"
+                    <div className="p-4 flex flex-col gap-4 border-t border-input-border">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <Input
+                                label="Institution"
                                 value={edu.institution}
                                 onChange={(e) => handleChange(index, 'institution', e.target.value)}
-                                className="block w-full rounded border-gray-300 text-sm p-1 border"
                             />
-                        </div>
-                        <div>
-                            <label className="block text-xs font-medium text-gray-500">Abschluss</label>
-                            <input
-                                type="text"
+                            <Input
+                                label="Degree"
                                 value={edu.studyType}
                                 onChange={(e) => handleChange(index, 'studyType', e.target.value)}
-                                className="block w-full rounded border-gray-300 text-sm p-1 border"
                             />
-                        </div>
-                        <div>
-                            <label className="block text-xs font-medium text-gray-500">Zeitraum / Ende</label>
-                            <input
-                                type="text"
+                            <Input
+                                label="Date/Period"
                                 value={edu.endDate}
                                 onChange={(e) => handleChange(index, 'endDate', e.target.value)}
-                                className="block w-full rounded border-gray-300 text-sm p-1 border"
+                                placeholder="2024"
                             />
-                        </div>
-                        <div>
-                            <label className="block text-xs font-medium text-gray-500">Ort</label>
-                            <input
-                                type="text"
+                            <Input
+                                label="Location"
                                 value={edu.location}
                                 onChange={(e) => handleChange(index, 'location', e.target.value)}
-                                className="block w-full rounded border-gray-300 text-sm p-1 border"
                             />
                         </div>
-                        <div className="col-span-1 md:col-span-2">
-                            <label className="block text-xs font-medium text-gray-500">Fachbereich</label>
-                            <input
-                                type="text"
-                                value={edu.area || ''}
-                                onChange={(e) => handleChange(index, 'area', e.target.value)}
-                                className="block w-full rounded border-gray-300 text-sm p-1 border"
-                            />
-                        </div>
+                        <Input
+                            label="Area of Study"
+                            value={edu.area || ''}
+                            onChange={(e) => handleChange(index, 'area', e.target.value)}
+                        />
                     </div>
                 </div>
             ))}
+
+            <AddButton onClick={addEducation} label="Add Education" />
         </div>
     );
 };

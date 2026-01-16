@@ -13,12 +13,42 @@ import type { CVData } from './types/cv';
 function App() {
   // Initialize state with default JSON data
   const [cvData, setCvData] = useState<CVData>(resumeData as unknown as CVData);
+  const [isSaving, setIsSaving] = useState(false);
+  const [lastSaved, setLastSaved] = useState<Date | null>(null);
+
+  const handleSave = async () => {
+    setIsSaving(true);
+    try {
+      const response = await fetch('/api/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(cvData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save');
+      }
+
+      setLastSaved(new Date());
+      // Optional: Show success feedback (toast, etc.)
+      console.log('Saved successfully');
+    } catch (error) {
+      console.error('Error saving:', error);
+      // Optional: Show error feedback
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   return (
     <EditorLayout
+      onSave={handleSave}
+      isSaving={isSaving}
+      lastSaved={lastSaved}
       form={
         <div className="space-y-8 pb-10">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">CV Editor</h2>
 
           <BasicsEditor
             basics={cvData.basics}

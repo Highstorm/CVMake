@@ -8,6 +8,8 @@ import { Education } from './Education';
 import { Awards } from './Awards';
 import { Skills } from './Skills';
 
+import { Profile } from './Profile';
+
 interface ResumeProps {
     data: CVData;
 }
@@ -22,8 +24,14 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
             {/* 
          Order based on JSON 'sections': 
          ["templates", "profile", "work", "projects", "awards", "education", "skills"]
-         "profile" is handled by Header (or Basics)
       */}
+
+            {data.basics.summary && (
+                <Section title={headings.profile}>
+                    <Profile summary={data.basics.summary} />
+                </Section>
+            )}
+
 
             <Section title={headings.work}>
                 <WorkExperience work={data.work} />
