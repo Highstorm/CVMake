@@ -37,11 +37,11 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 <WorkExperience work={data.work} />
             </Section>
 
-            <Section title={headings.projects}>
+            <Section title={headings.projects} className="print:break-before-page">
                 <Projects projects={data.projects} />
             </Section>
 
-            <Section title={headings.awards}>
+            <Section title={headings.awards} className="print:break-before-page">
                 <Awards awards={data.awards} />
             </Section>
 

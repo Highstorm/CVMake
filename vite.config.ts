@@ -23,7 +23,10 @@ export default defineConfig({
                 const data = JSON.parse(body);
 
                 // Define path to resume.json relative to project root
-                const filePath = path.resolve(__dirname, 'src/data/resume.json');
+                const url = new URL(req.url || '', `http://${req.headers.host}`);
+                const lang = url.searchParams.get('lang') || 'de';
+                const filename = lang === 'en' ? 'resume.en.json' : 'resume.de.json';
+                const filePath = path.resolve(__dirname, `src/data/${filename}`);
 
                 // Write the updated JSON to file
                 fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');

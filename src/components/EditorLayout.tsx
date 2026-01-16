@@ -6,9 +6,11 @@ interface EditorLayoutProps {
     onSave?: () => void;
     isSaving?: boolean;
     lastSaved?: Date | null;
+    currentLanguage?: 'de' | 'en';
+    onLanguageChange?: (lang: 'de' | 'en') => void;
 }
 
-export const EditorLayout: React.FC<EditorLayoutProps> = ({ form, preview, onSave, isSaving, lastSaved }) => {
+export const EditorLayout: React.FC<EditorLayoutProps> = ({ form, preview, onSave, isSaving, lastSaved, currentLanguage = 'de', onLanguageChange }) => {
     const [timeAgo, setTimeAgo] = useState('Unsaved changes');
 
     useEffect(() => {
@@ -47,6 +49,22 @@ export const EditorLayout: React.FC<EditorLayoutProps> = ({ form, preview, onSav
                 </div>
                 <div className="flex flex-1 justify-end gap-6 items-center">
                     <div className="flex gap-3">
+                        <div className="relative inline-block text-left">
+                            <select
+                                value={currentLanguage}
+                                onChange={(e) => onLanguageChange?.(e.target.value as 'de' | 'en')}
+                                className="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-3 bg-surface-dark border border-[#324d67] hover:bg-[#1c2b3a] text-white text-sm font-bold transition-colors appearance-none pr-8 focus:outline-none focus:ring-1 focus:ring-primary"
+                                style={{
+                                    backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
+                                    backgroundPosition: `right 0.5rem center`,
+                                    backgroundSize: `1.5em 1.5em`,
+                                    backgroundRepeat: 'no-repeat'
+                                }}
+                            >
+                                <option value="de">DE</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </div>
                         <button
                             onClick={onSave}
                             disabled={isSaving}

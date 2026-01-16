@@ -1,0 +1,283 @@
+{
+  "selectedTemplate": 4,
+  "headings": {
+    "education": "Education",
+    "projects": "Core Competencies",
+    "awards": "Certifications",
+    "work": "Experience",
+    "skills": "Languages",
+    "profile": "Profile"
+  },
+  "basics": {
+    "name": "Sebastian Pieper",
+    "email": "seb@stianpieper.de",
+    "location": {
+      "address": "Hinterer Berg 15, 95100 Selb, Bayern"
+    },
+    "phone": "+49 (0) 151 405 130 49",
+    "summary": "An experienced project lead and product owner with a deep understanding of software architecture, business processes, and organisational development.\nI have a proven track record in managing complex digital projects, leading international teams, and introducing scalable product and system landscapes.",
+    "label": "Project Manager"
+  },
+  "education": [
+    {
+      "endDate": "2009",
+      "institution": "Le-Go GmbH",
+      "location": "Hof",
+      "studyType": "IT specialist for application development",
+      "area": "Apprenticeship"
+    },
+    {
+      "institution": "Berufsoberschule Regensburg",
+      "studyType": "Fachhochschulreife",
+      "location": "Regensburg",
+      "endDate": "2010",
+      "area": "Math & Science"
+    },
+    {
+      "institution": "Fachhochschule München",
+      "location": "München",
+      "endDate": "2012",
+      "area": "Applied Computer Science"
+    }
+  ],
+  "work": [
+    {
+      "location": "Düsseldorf",
+      "position": "Business Product Owner",
+      "website": "athlon.com",
+      "startDate": "February 2024",
+      "highlights": [
+        "Responsibilities as Business Product Owner for central mobility solutions at Athlon (Mercedes-Benz Mobility) included end-to-end management, stakeholder alignment, and content management for two cross-functional development teams.",
+        "Implementation of electronic invoice processing in 2025. Designing and setting up new incoming and outgoing invoice routes (XRechnung and ZUGFeRD), including XML/XSD validation, PDF conversion, and audit-proof archiving (D3).",
+        "Responsibilities included requirements engineering for complex technical and system landscapes, modelling end-to-end processes, and defining interface, validation, and data processing logic.",
+        "I developed a prototype for automated testing and validation systems for 33 microservices and handed it over to the development team, increasing test coverage from 5% to 70%. I also transferred the systems to CI/CD pipelines. This reduced testing effort to less than 20% per sprint and release rollbacks by 90%.",
+        "I developed an AI-supported prototype for intelligent XML error classification and transferred it to a group-wide AI initiative to scale future e-invoicing processes.",
+        "I led the development of a driver data management solution for Daimler Truck and Athlon, achieving a sustainable reduction in service costs of over 50%, as well as the strategic development of existing system architecture by transitioning from monolithic structures to event-driven microservices, which significantly improved response times and reduced downtime.",
+        ""
+      ],
+      "company": "Athlon Germany GmbH",
+      "endDate": "December 2025"
+    },
+    {
+      "location": "Selb / Krakow",
+      "position": "Senior Product Owner & Project Manager",
+      "website": "https://analyzing-testing.netzsch.com/de",
+      "startDate": "March 2024",
+      "endDate": "December 2024",
+      "highlights": [
+        "Responsible for the product ownership of an international customer portal for the consolidated evaluation of technical device data, as well as the definition of a target vision and implementation strategy.",
+        "Also responsible for helping the Team establishing a structured product backlog, introducing clear user stories, reducing development times and achieving a fivefold increase in project progress within a few months.",
+        "Managed and developed an international team of developers, introducing an efficient, story-based working model and increasing team productivity by over 30%.",
+        "Served as technical advisor to the team, working closely with external stakeholders to significantly improve technical alignment.\nTogether we optimised internal team processes by eliminating unnecessary structures and introducing lean workflows, thereby reducing coordination and consultation efforts by ~25%.\n\n",
+        "I developed agile working methods and established optimised reporting. Increased transparency and predictability for project management and early risk detection."
+      ],
+      "company": "NETZSCH Gerätebau GmbH & Co. KG"
+    },
+    {
+      "location": "Selb",
+      "position": "Project Manager & Product Owner",
+      "startDate": "October 2023",
+      "highlights": [
+        "Freelance consultant specialising in software development, project management and technical product management. I support clients in the strategic, functional and technical implementation of complex software projects.",
+        "I developed an aggregation and management platform for social media initiatives at NVIDIA Germany, centralising the collection and evaluation of influencer content and establishing a KPI framework for performance and budget analyses.",
+        "I have also analysed processes and implemented a digital documentation system for quality assurance at Vishay Germany, closing over 90% of all documentation gaps and significantly increasing auditability.",
+        "As lead software developer for the Federal Employment Agency's \"EAMZ\" project, I managed two development teams and implemented regulatory requirements in the registration front end for European workers."
+      ],
+      "company": "Self-Employed",
+      "endDate": "present"
+    },
+    {
+      "location": "Hof",
+      "position": "Project Manager & Product Owner",
+      "website": "https://fronetic.de",
+      "startDate": "January 2019",
+      "endDate": "October 2023",
+      "highlights": [
+        "In my role as a project manager, I was responsible for a large number of customer projects relating to web and mobile applications.\n\nMy responsibilities included comprehensive project management. I oversaw projects from conception to implementation.",
+        "As Product Owner, I supported the development team by assisting with development, roll-out, go-to-market and continuous optimisation of existing products. \n",
+        "As the interface between customers, stakeholders and the development team, I contributed to developing innovative solutions and successfully implementing customers' visions."
+      ],
+      "company": "Fronetic GmbH"
+    },
+    {
+      "location": "Hof",
+      "position": "Managing Director",
+      "website": "https://fronetic.de",
+      "startDate": "March 2016",
+      "endDate": "October 2023",
+      "highlights": [
+        "I was appointed Managing Director of Fronetic GmbH in March 2016, taking responsibility for internal administrative processes and customer consultancy. ",
+        "In November 2019, I took on responsibility for project development and acquisition. In this role, I successfully transformed the company from a three-person consultancy into a team-oriented software company with 11 highly qualified employees.",
+        "I achieved this by building a motivated, agile project team and acquiring customers throughout Germany."
+      ],
+      "company": "Fronetic GmbH"
+    },
+    {
+      "location": "Hof",
+      "company": "Fronetic GmbH",
+      "position": "Senior Software Engineer & Consultant",
+      "website": "https://fronetic.de",
+      "startDate": "November 2015",
+      "endDate": "December 2022",
+      "highlights": [
+        "We provided technical and specialist consultancy for customer projects, with a focus on microservice architectures, cloud systems and modern web and backend technologies.\n",
+        "Developing backend and frontend systems, including architectural work and technical design. I have supported and partially managed development teams in various project phases.",
+        "Supported renowned customers such as Nvidia Germany, GfK, and CUBE, as well as working on projects for the German public administration."
+      ]
+    },
+    {
+      "location": "Selb",
+      "company": "Moyoki GmbH / Moyoki UG",
+      "position": "Softwareentwickler",
+      "startDate": "January 2011",
+      "endDate": "November 2015",
+      "highlights": [
+        "The development of mobile apps and web applications for regional customers and the development of internal product ideas were the core areas of activity.\n\n",
+        "The work involves the technical design, implementation and further development of modern software solutions. The latest web and app technologies are used for this purpose."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "German",
+      "level": "Native (C1)",
+      "keywords": [
+        "Muttersprache (C1)"
+      ]
+    },
+    {
+      "name": "English",
+      "level": "Business fluent (C2)",
+      "keywords": [
+        "Verhandlungssicher (C2)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project management",
+      "description": "Responsible for the management of complex software projects from conception to launch. Responsibilities include planning, roadmapping, budgeting, stakeholder management, and leading interdisciplinary teams. Experienced in working with agile and hybrid frameworks.",
+      "keywords": [
+        "Agile project management",
+        "Scrum/Kanban",
+        "roadmapping",
+        "risk management",
+        "budget and resource planning",
+        "stakeholder management",
+        "go-live management",
+        "KPI tracking"
+      ]
+    },
+    {
+      "name": "Product development",
+      "description": "Take end-to-end responsibility for digital products, from discovery and market and user analysis to prioritisation, backlog maintenance and technical implementation. Focus on creating sustainable product value and making data- and KPI-based decisions.",
+      "keywords": [
+        "Product strategy",
+        "product vision & roadmap",
+        "user research",
+        "backlog management",
+        "prioritisation",
+        "data-driven product decisions",
+        "UX/UI collaboration",
+        "AI-supported product development"
+      ]
+    },
+    {
+      "name": "Requirement engineering",
+      "description": "Systematic collection, analysis, modelling and documentation of functional and technical requirements. Translation of complex business processes into clear, actionable stories and specifications.",
+      "keywords": [
+        "Requirements analysis",
+        "use cases",
+        "user stories/epics",
+        "BPMN",
+        "UML",
+        "acceptance criteria",
+        "gap analysis",
+        "interface specifications"
+      ]
+    },
+    {
+      "name": "Business analysis",
+      "description": "I analyse existing processes, identify optimisation potential and derive recommendations for action. I am confident in my ability to design end-to-end processes and analyse data to support decision-making.",
+      "keywords": [
+        "Process analysis",
+        "process optimisation",
+        "end-to-end analysis",
+        "data analysis",
+        "dashboards & KPIs",
+        "digitalisation",
+        "stakeholder workshops",
+        "cost-benefit analyses"
+      ]
+    },
+    {
+      "name": "Teammanagement",
+      "description": "Lead and develop interdisciplinary teams in agile environments. Focusing on clarity of roles and communication, empowerment, and fostering a productive and appreciative team culture.",
+      "keywords": [
+        "Team leadership",
+        "facilitation",
+        "coaching",
+        "conflict management",
+        "agile leadership",
+        "cross-functional collaboration and mentoring."
+      ]
+    },
+    {
+      "name": "Software architektur",
+      "description": "I have an in-depth technical understanding gained from previous work as a full-stack software engineer. Experienced in cloud architectures, microservices, APIs, DevOps processes, and software quality.",
+      "keywords": [
+        "Microservices",
+        "REST APIs / API design",
+        "cloud (Azure/AWS)",
+        "CI/CD",
+        "Docker / containerisation",
+        "clean architecture",
+        "data models",
+        "software quality"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Certified Scrum Professional - Product Owner® (CSP-PO)",
+      "date": "December 2025",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Advanced Certified Scrum Product Owner® (ACSPO)",
+      "date": "November 2023",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Certified Scrum Product Owner® (CSPO)",
+      "date": "January 2023",
+      "awarder": "Scrum Alliance Inc."
+    }
+  ],
+  "award2": [
+    {
+      "title": "Certified Scrum Professional - Product Owner® (CSP-PO)",
+      "date": "Dezember 2025",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Advanced Certified Scrum Product Owner® (ACSPO)",
+      "date": "November 2023",
+      "awarder": "Scrum Alliance Inc."
+    },
+    {
+      "title": "Certified Scrum Product Owner® (CSPO)",
+      "date": "Januar 2023",
+      "awarder": "Scrum Alliance Inc."
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "projects",
+    "awards",
+    "education",
+    "skills"
+  ]
+}
